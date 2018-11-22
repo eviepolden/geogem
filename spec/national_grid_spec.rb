@@ -2,20 +2,8 @@ require_relative '../spec/spec_helper'
 
 RSpec.describe NationalGrid do
   context 'When given null values' do
-    let(:easting) { }
-    let(:northing) { }
-
     it 'throws an error' do
-      xyz
-    end
-  end
-
-  context 'When given Easting Northing' do
-    let(:easting) { }
-    let(:northing) { }
-
-    it 'returns the correct Lat Long' do
-      xyz
+      expect(OSGB36toWGS84(531061, 104458)).to eq(50.824841, -0.14057994)
     end
   end
 end
